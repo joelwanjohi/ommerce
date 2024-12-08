@@ -56,14 +56,16 @@
 <nav class="navbar navbar-expand-lg shadow-sm" style="background-color: #fafafa;">
   <div class="container-fluid text-center">
     <a class="navbar-brand" href="{% url 'product:home' %}">
-      <div style="text-align: center;">
-          <span style="font-size: 36px; font-weight: bold; color: #ff7606;">MYSOKO</span><br>
-         
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: start;">
+          <span style="font-size: 30px; font-weight: bold; color: #ff7606;">MYSOKO</span>
+        </div>
+      
+        <a class="nav-link" href="/product_search/" style="margin-left: 20px;">
+          <i class="fa-solid fa-magnifying-glass"></i>&nbsp;Search
+        </a>
       </div>
-  </a>
-  
-      <a class="nav-link " href="/product_search/"> <i class="fa-solid fa-magnifying-glass"> &nbsp; </i>Search</a>
-
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,9 +78,9 @@
 
           <div class="container color-white">
             <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="{% url 'product:create_product' %}"><strong>SELL</strong></a>
-                  </li>
+                  </li> -->
 
                   {% if user.is_authenticated %}
                     <!-- Visible to authenticated users -->
